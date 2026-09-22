@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://blc1t000pe56r"]
+
+[ext_resource type="Texture2D" uid="uid://cv4sskkh0o3cg" path="res://icon.svg" id="1_37kl0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xeja3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_37kl0")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Test" type="Node2D" unique_id=1160834626]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=58476585]
+sprite_frames = SubResource("SpriteFrames_xeja3")

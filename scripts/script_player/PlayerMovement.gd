@@ -1,9 +1,8 @@
-extends CharacterBody2D
+class_name PlayerMovement
+extends RefCounted
 
-@export var speed: float = 120.0
-
-func _physics_process(_delta: float) -> void:
-	var direction = Vector2.ZERO
+func get_direction() -> Vector2:
+	var direction: Vector2 = Vector2.ZERO
 
 	if Input.is_key_pressed(KEY_W):
 		direction.y -= 1
@@ -17,6 +16,4 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_key_pressed(KEY_D):
 		direction.x += 1
 
-	velocity = direction.normalized() * speed
-
-	move_and_slide()
+	return direction.normalized()

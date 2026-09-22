@@ -1,4 +1,4 @@
-class_name galinha
+class_name Galinha
 extends CharacterBody2D
 
 #=============Modificadores===================
@@ -19,12 +19,12 @@ var max_hp: int = get_max_hp()
 var hp: int = max_hp
 
 func _init(p_gender: String, p_name: String) -> void:
-    gender = p_gender
-    pet_nome = p_name
+	gender = p_gender
+	pet_nome = p_name
 
 func get_max_hp() -> int:
-    var output: int = base_hp + (m_con * 10)
-    return output
+	var output: int = base_hp + (m_con * 10)
+	return output
 
 func _ready() -> void:
-    return 
+	return 
