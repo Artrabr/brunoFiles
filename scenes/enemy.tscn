@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://c20dawiv15tiy"]
+
+[ext_resource type="Texture2D" uid="uid://dl56rkj3gx6b2" path="res://assets/spr_enemy/spr_enemy_idle.png" id="1_7k104"]
+[ext_resource type="Script" uid="uid://d3od6q6sfpnpy" path="res://scripts/script_player/Enemy.gd" id="2_enemy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7xaro"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7k104")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7k104"]
+size = Vector2(15, 30)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=309023241]
+script = ExtResource("2_enemy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=259288252]
+sprite_frames = SubResource("SpriteFrames_7xaro")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=369866177]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_7k104")
+
+[node name="InteractionLabel" type="Label" parent="." unique_id=226995458]
+z_index = 1
+offset_left = -130.0
+offset_top = -44.0
+offset_right = 130.0
+offset_bottom = -22.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 8
+text = "para interagir clique 'e'"
+horizontal_alignment = 1

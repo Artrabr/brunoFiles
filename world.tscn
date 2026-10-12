@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://b8tjbl3f13vw6"]
 
-[ext_resource type="PackedScene" uid="uid://ciepl78k42rqj" path="res://player.tscn" id="1_fj7yv"]
-[ext_resource type="PackedScene" uid="uid://blc1t000pe56r" path="res://test.tscn" id="2_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://ciepl78k42rqj" path="res://scenes/player.tscn" id="1_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://blc1t000pe56r" path="res://scenes/test.tscn" id="2_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://bqeowtliw4w5d" path="res://scenes/wall.tscn" id="3_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://c20dawiv15tiy" path="res://scenes/enemy.tscn" id="4_aqk2v"]
 
 [node name="World" type="Node2D" unique_id=10749860]
 
@@ -9,3 +11,9 @@
 
 [node name="Test" parent="." unique_id=1160834626 instance=ExtResource("2_tlwt5")]
 position = Vector2(163, -37)
+
+[node name="Wall" parent="." unique_id=1151815550 instance=ExtResource("3_tlwt5")]
+position = Vector2(99, 24)
+
+[node name="Enemy" parent="." unique_id=309023241 instance=ExtResource("4_aqk2v")]
+position = Vector2(50, 36)

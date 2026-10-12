@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://blc1t000pe56r"]
 
-[ext_resource type="Texture2D" uid="uid://cv4sskkh0o3cg" path="res://icon.svg" id="1_37kl0"]
+[ext_resource type="Texture2D" uid="uid://cv4sskkh0o3cg" path="res://assets/icon.svg" id="1_37kl0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xeja3"]
 animations = [{
