@@ -1,5 +1,6 @@
 class_name Player extends CharacterBody2D
 
+#region // Dados do player
 # ============ DADOS ============
 var character_name: String = "Michael"
 
@@ -16,7 +17,9 @@ var base_hp: int = 50
 var max_hp: int = get_max_hp()
 var hp: int = max_hp
 
-@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@export_category("Objects")
+@export var animated_sprite: AnimatedSprite2D# = $AnimatedSprite2D
+#endregion
 
 # ============ VIDA ============
 
@@ -39,7 +42,6 @@ func attack(item: String) -> void:
 			var damage = calculate_damage(item)
 			body.hp -= damage
 			print("Ataque realizado com sucesso")
-
 
 func calculate_damage(item: String) -> int:
 	match item: # Parecido com switch no PHP/GML

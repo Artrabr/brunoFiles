@@ -53,8 +53,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=1717009975]
+[node name="Player" type="CharacterBody2D" unique_id=1717009975 node_paths=PackedStringArray("animated_sprite")]
 script = ExtResource("1_tuyoq")
+animated_sprite = NodePath("AnimatedSprite2D")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1674785878]
 
